@@ -1,0 +1,33 @@
+<h1>Listing importers</h1>
+
+<table>
+  <tr>
+    <th>Purchaser name</th>
+    <th>Item description</th>
+    <th>Price</th>
+    <th>Purchase count</th>
+    <th>Merchant address</th>
+    <th>Merchant name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @importers.each do |importer| %>
+  <tr>
+    <td><%= importer.purchaser_name %></td>
+    <td><%= importer.item_description %></td>
+    <td><%= importer.price %></td>
+    <td><%= importer.purchase_count %></td>
+    <td><%= importer.merchant_address %></td>
+    <td><%= importer.merchant_name %></td>
+    <td><%= link_to 'Show', importer %></td>
+    <td><%= link_to 'Edit', edit_importer_path(importer) %></td>
+    <td><%= link_to 'Destroy', importer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Importer', new_importer_path %>
