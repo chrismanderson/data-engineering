@@ -1,0 +1,16 @@
+# Living Social Challenge Project
+## Chris Anderson
+
+Here is my submitted entry for the LivingSocial Associate Developer position. I haven't done much rails development in the past, but I wanted to try and get a grasp of it for this challenge and for the future. My application has 4 models: purchases, merchants, customers, and imports. The first three are self-explanatory. The forth model is the class that handles file imports (using the paperclip gem). 
+
+The importer model handles the CSV parsing, using Rail's default csv library. I'd rather have that code in a separate controller, but found it just a bit tricky in terms of how to reference the file itself from a controller instead of from the model.
+
+I used scaffolds to generate the models, which I know in the rails world generally isn't the best practice, but it's a lifesaver in terms of just figuring out default syntax and whatnot for the first time.
+
+Any questions, please feel free to contact me.
+
+Thanks!
+- Chris
+
+(BTW, big fan of the Doctor Who/Back to the Future references.)
+
