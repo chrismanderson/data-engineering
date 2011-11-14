@@ -44,7 +44,7 @@ class ImportersController < ApplicationController
 
     respond_to do |format|
       if @importer.save
-        format.html { redirect_to @importer, notice: 'Importer was successfully created.' }
+        format.html { redirect_to purchases_path, notice: 'Importer was successfully created.' }
         format.json { render json: @importer, status: :created, location: @importer }
       else
         format.html { render action: "new" }

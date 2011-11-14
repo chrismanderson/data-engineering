@@ -1,4 +1,6 @@
 Lsocialapp::Application.routes.draw do
+ root :to => 'purchases#index'
+  
   resources :importers
 
   resources :purchases

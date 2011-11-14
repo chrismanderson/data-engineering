@@ -3,7 +3,10 @@ class PurchasesController < ApplicationController
   # GET /purchases.json
   def index
     @purchases = Purchase.all
-
+    # gets the gross revenue of all the purchases.
+    # not the best way to attach this method to purchases, but it gets the job done in this case
+    @revenue = @purchases.sum {|p| p.price * p.count }
+     
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @purchases }

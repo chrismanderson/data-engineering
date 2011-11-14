@@ -15,17 +15,18 @@
 <% @purchases.each do |purchase| %>
   <tr>
     <td><%= purchase.name %></td>
-    <td><%= purchase.price %></td>
+    <td><%= number_to_currency(purchase.price) %></td>
     <td><%= purchase.count %></td>
-    <td><%= purchase.customer_id %></td>
-    <td><%= purchase.merchant_id %></td>
+    <td><%= purchase.customer.name %></td>
+    <td><%= purchase.merchant.name %></td>
     <td><%= link_to 'Show', purchase %></td>
     <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
     <td><%= link_to 'Destroy', purchase, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
-
+<p><strong>Gross revenue:</strong><%= number_to_currency(@revenue) %></p>
+<br />
 <br />
 
-<%= link_to 'New Purchase', new_purchase_path %>
+<%= link_to 'New Import', new_importer_path %>
