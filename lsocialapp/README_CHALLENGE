@@ -1,5 +1,15 @@
-# Living Social Challenge Project
+
 ## Chris Anderson
+
+To install: (I used Ruby 1.9.2 and Rails 3.1.1)
+
+`cd lsocialapp`
+
+`bundle install`
+
+`rake db:setup`
+
+Start the server with `rails s` and you can upload and view purchases from the main page.
 
 Here is my submitted entry for the LivingSocial Associate Developer position. I haven't done much rails development in the past, but I wanted to try and get a grasp of it for this challenge and for the future. My application has 4 models: purchases, merchants, customers, and imports. The first three are self-explanatory. The forth model is the class that handles file imports (using the paperclip gem). 
 
